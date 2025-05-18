@@ -12,7 +12,6 @@ def map_function(filename):
     passenger_flights = defaultdict(int)
     with open(filename, 'r') as file:
         reader = csv.reader(file)
-        next(reader)  # Skip the header
         for row in reader:
             try:
                 passenger_id = row[0]  # Assuming passenger ID is in the first column
